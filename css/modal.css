@@ -2,14 +2,19 @@
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
 
     background-color: rgba(46, 47, 66, 0.4);
+
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms ease, visibility 250ms ease;
+
+    transition:
+        opacity 250ms ease,
+        visibility 250ms ease;
 }
 
 .backdrop.is-open {
@@ -23,9 +28,10 @@
     top: 50%;
     left: 50%;
 
-    width: 408px;
-    min-height: 584px;
-    padding: 72px 24px 24px;
+    width: calc(100% - 32px);
+    max-width: 288px;
+    min-height: 623px;
+    padding: 72px 16px 24px;
     box-sizing: border-box;
 
     background-color: #fcfcfc;
@@ -54,6 +60,7 @@
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 50%;
     background-color: #e7e9fc;
+
     cursor: pointer;
 
     transition: 
@@ -82,14 +89,15 @@
 }
 
 .modal-title {
-    margin-top: 0;
-    margin-bottom: 16px;
-    
+    margin: 0 0 16px;
+
     color: #2e2f42;
+
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
     text-align: center;
 }
 
@@ -105,7 +113,9 @@
 .modal-form-label {
     display: block;
     margin-bottom: 4px;
+
     color: #8e8f99;
+
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -119,16 +129,18 @@
     width: 100%;
     height: 40px;
     padding: 0 12px 0 38px;
+    box-sizing: border-box;
 
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     outline: transparent;
+
     background-color: transparent;
     color: #434455;
     font-size: 16px;
-    box-sizing: border-box;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
     transition: border-color 250ms ease;
 }
 
@@ -160,10 +172,12 @@
     height: 120px;
     margin: 0;
     padding: 8px 16px;
+    box-sizing: border-box;
     resize: none;
 
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+
     outline: transparent;
     background-color: transparent;
     color: #434455;
@@ -171,7 +185,6 @@
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    box-sizing: border-box;
 
     transition: border-color 250ms ease;
 }
@@ -190,8 +203,7 @@
 }
 
 .modal-form-checkbox-label {
-    display: flex;
-    align-items: center;
+    display: block;
     color: #8e8f99;
     font-size: 12px;
     line-height: 1.17;
@@ -209,6 +221,7 @@
     width: 16px;
     height: 16px;
     margin-right: 8px;
+    vertical-align: middle;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
 
@@ -249,7 +262,7 @@
     border: none;
     border-radius: 4px;
     background-color: #4d5ae5;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     color: #ffffff;
 
     font-size: 16px;
@@ -271,11 +284,20 @@
     position: absolute;
     width: 1px;
     height: 1px;
-    margin: -1px;
     padding: 0;
-    border: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
+    margin: -1px;
     overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
+
+@media screen and (min-width: 768px) {
+    .modal {
+        width: 408px;
+        max-width: 408px;
+        min-height: 584px;
+        padding: 72px 24px 24px;
+    }
+}
+
