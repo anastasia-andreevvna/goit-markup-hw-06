@@ -107,4 +107,12 @@
     <path fill="currentColor" d="M24 2 0 13.25l7.6699 2.3672L19.5 6.375 10.5017 16.4913l73e-4 23e-4-9e-3-23e-4V22l4.3013-4.1817 5.4488 1.6817z" />
 </symbol>
     </defs>
+    <symbol id="menu" viewBox="0 0 32 22">
+    <path
+        d="M1.5 1.5h29M1.5 11h29M1.5 20.5h29"
+        stroke="#2E2F42"
+        stroke-width="3"
+        stroke-linecap="round"
+    />
+</symbol>
 </svg>
